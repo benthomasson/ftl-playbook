@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pytest = "*"
+flake8 = "*"
+autopep8 = "*"
+pytest-asyncio = "*"
+
+[packages]
+docopt = "*"
+faster-than-light = "==0.1.1"
+asyncssh = "*"
+importlib-resources = "*"
+pyyaml = "*"
+
+[requires]
+python_version = "3.8"
