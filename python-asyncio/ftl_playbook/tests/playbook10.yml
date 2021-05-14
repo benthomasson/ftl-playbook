@@ -2,14 +2,14 @@
 - name: simple
   hosts: localhost
   tasks:
-    - ping:
-    - ping:
-    - ping:
-    - ping:
-    - ping:
-    - ping:
-    - ping:
-    - ping:
-    - ping:
-    - ping:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
 ...

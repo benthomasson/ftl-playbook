@@ -44,4 +44,9 @@ setup(
     url='https://github.com/benthomasson/ftl_playbook',
     version='0.0.1',
     zip_safe=False,
+    entry_points={
+        'console_scripts': [
+            'ftl-playbook = ftl_playbook.cli:entry_point',
+        ],
+    }
 )
