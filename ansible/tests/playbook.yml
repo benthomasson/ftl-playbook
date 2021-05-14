@@ -1,0 +1,6 @@
+---
+- name: simple
+  hosts: localhost
+  tasks:
+    - ping:
+...
