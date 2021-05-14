@@ -1,4 +1,4 @@
-Welcome to faster-than-light-playbook's documentation!
+Welcome to FTL Playbook's documentation!
 ======================================
 
 .. toctree::

@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
-"""Tests for `faster_than_light_playbook` package."""
+"""Tests for `ftl_playbook` package."""
 
 import pytest
 
 
-from faster_than_light_playbook import faster_than_light_playbook
+from ftl_playbook import ftl_playbook
 
 
 @pytest.fixture

@@ -1,4 +1,4 @@
-* faster-than-light-playbook version:
+* FTL Playbook version:
 * Python version:
 * Operating System:
 

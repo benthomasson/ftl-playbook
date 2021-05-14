@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=faster_than_light_playbook
+set SPHINXPROJ=ftl_playbook
 
 if "%1" == "" goto help
 

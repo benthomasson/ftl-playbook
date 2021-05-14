@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
-SPHINXPROJ    = faster_than_light_playbook
+SPHINXPROJ    = ftl_playbook
 SOURCEDIR     = .
 BUILDDIR      = _build
 

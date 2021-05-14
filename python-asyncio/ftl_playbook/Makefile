@@ -48,7 +48,7 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## check style with flake8
-	flake8 faster_than_light_playbook tests
+	flake8 ftl_playbook tests
 
 test: ## run tests quickly with the default Python
 	pytest
@@ -57,15 +57,15 @@ test-all: ## run tests on every Python version with tox
 	tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source faster_than_light_playbook -m pytest
+	coverage run --source ftl_playbook -m pytest
 	coverage report -m
 	coverage html
 	$(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	rm -f docs/faster_than_light_playbook.rst
+	rm -f docs/ftl_playbook.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ faster_than_light_playbook
+	sphinx-apidoc -o docs/ ftl_playbook
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
