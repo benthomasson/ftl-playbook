@@ -15,11 +15,12 @@ def get_module_name(task):
 
 
 async def playbook_interpreter(playbook, inventory, module_dirs):
+    gate_cache = {}
     for play in playbook:
         print(play)
         tasks = play.get('tasks', [])
         hosts = play.get('hosts', [])
         name = play.get('name', '')
         for task in tasks:
-            output = await run_module(inventory, module_dirs, get_module_name(task))
+            output = await run_module(inventory, module_dirs, get_module_name(task), gate_cache=gate_cache)
             print(output)

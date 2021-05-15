@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f740436855ca172604038d30235f4ce8d7e7f4fe709069ba6210bc2a7b5bd702"
+            "sha256": "9bddcb2cff74475733928e785124a674c03e4cae882072f71c05a0a6179601f1"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -90,6 +90,13 @@
             "markers": "python_version >= '3.6'",
             "version": "==3.4.7"
         },
+        "docopt": {
+            "hashes": [
+                "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
+            ],
+            "index": "pypi",
+            "version": "==0.6.2"
+        },
         "jinja2": {
             "hashes": [
                 "sha256:2f2de5285cf37f33d33ecd4a9080b75c87cd0c1994d5a9c6df17131ea1f049c6",
@@ -159,7 +166,7 @@
                 "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1",
                 "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"
             ],
-            "markers": "python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2'",
+            "markers": "python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==2.4.7"
         },
         "pyyaml": {

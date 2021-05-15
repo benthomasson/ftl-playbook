@@ -1,0 +1,15 @@
+---
+- name: simple
+  hosts: localhost
+  tasks:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+    - argtest:
+...
