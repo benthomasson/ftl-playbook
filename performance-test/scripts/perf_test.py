@@ -3,7 +3,7 @@
 
 """
 Usage:
-    perf_test [options] <cmd> <name> <type> <n>
+    perf_test [options] <cmd> <name> <type> <n> <m>
 
 Options:
     -h, --help        Show this page
@@ -33,7 +33,7 @@ def main(args=None):
     else:
         logging.basicConfig(level=logging.WARNING)
 
-    writer = csv.DictWriter(sys.stdout, fieldnames=['cmd', 'name', 'type', 'n', 'time'])
+    writer = csv.DictWriter(sys.stdout, fieldnames=['cmd', 'name', 'type', 'n', 'm', 'time'])
     if not parsed_args['--no-header']:
         writer.writeheader()
     if parsed_args['--only-header']:
@@ -45,7 +45,12 @@ def main(args=None):
         print(parsed_args['<cmd>'])
         raise
     end = time.time()
-    writer.writerow(dict(cmd=parsed_args['<cmd>'], name=parsed_args['<name>'], type=parsed_args['<type>'], n=parsed_args['<n>'], time=end-start))
+    writer.writerow(dict(cmd=parsed_args['<cmd>'],
+                         name=parsed_args['<name>'],
+                         type=parsed_args['<type>'],
+                         n=parsed_args['<n>'],
+                         m=parsed_args['<m>'],
+                         time=end-start))
 
     return 0
 

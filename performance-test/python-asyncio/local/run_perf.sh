@@ -1,11 +1,14 @@
 ulimit -Sn 10000
 #Argtest
 
-../../scripts/perf_test.py x x x x --only-header
+../../scripts/perf_test.py x x x x x --only-header
 for t in argtest
 do
-for n in 1 10 100 1000
+for m in 1 10 100
 do
-../../scripts/perf_test.py "ftl-playbook -M modules -i inventory1.yml playbook${n}.yml" ftl-playbook ${t} ${n} --no-header
+for n in 1 10 100
+do
+../../scripts/perf_test.py "ftl-playbook -M modules -i inventory${m}.yml playbook${n}.yml" ftl-playbook ${t} ${n} ${m} --no-header
+done
 done
 done

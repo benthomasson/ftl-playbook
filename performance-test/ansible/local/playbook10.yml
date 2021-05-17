@@ -1,6 +1,6 @@
 ---
 - name: simple
-  hosts: localhost
+  hosts: all
   tasks:
     - argtest:
     - argtest:
