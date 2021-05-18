@@ -1,6 +1,7 @@
 ---
 - name: simple
   hosts: all
+  gather_facts: false
   tasks:
     - argtest:
     - argtest:
