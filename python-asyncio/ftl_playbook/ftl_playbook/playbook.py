@@ -22,5 +22,5 @@ async def playbook_interpreter(playbook, inventory, module_dirs):
         hosts = play.get('hosts', [])
         name = play.get('name', '')
         for task in tasks:
-            output = await run_module(inventory, module_dirs, get_module_name(task), gate_cache=gate_cache)
+            output = await run_module(inventory, module_dirs, get_module_name(task), gate_cache=gate_cache, modules=[get_module_name(task)])
             print(output)

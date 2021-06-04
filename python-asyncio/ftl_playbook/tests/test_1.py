@@ -50,7 +50,6 @@ async def test_playbook_interpreter():
     playbook = load_playbook('playbook.yml')
     inventory = load_inventory('inventory.yml')
     await playbook_interpreter(playbook, inventory, ['modules'])
-    assert False
 
 
 @pytest.mark.asyncio
@@ -59,5 +58,4 @@ async def test_playbook_interpreter10():
     playbook = load_playbook('playbook10.yml')
     inventory = load_inventory('inventory.yml')
     await playbook_interpreter(playbook, inventory, ['modules'])
-    assert False
 
