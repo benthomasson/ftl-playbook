@@ -1,4 +1,4 @@
-from faster_than_light import run_module
+from faster_than_light import run_module, run_ftl_module
 import yaml
 import os
 
@@ -28,6 +28,6 @@ async def playbook_interpreter(playbook, inventory, module_dirs):
         for task in tasks:
             print ()
             print (f'TASK [{get_module_name(task)}] '.ljust(term_width, '*'))
-            output = await run_module(inventory, module_dirs, get_module_name(task), gate_cache=gate_cache, modules=[get_module_name(task)])
+            output = await run_ftl_module(inventory, module_dirs, get_module_name(task), gate_cache=gate_cache, modules=[get_module_name(task)])
             #for i in output:
             #    print("ok:", f'[{i}]')
