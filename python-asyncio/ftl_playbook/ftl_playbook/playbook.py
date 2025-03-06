@@ -29,7 +29,11 @@ def get_module_args(task, module_name):
 
 
 def get_hosts_from_pattern(inventory, hosts):
-    return hosts.split(",")
+    print(f"{inventory=} {hosts=}")
+    if hosts.strip() == "all":
+        return list(inventory.get('all', {}).get('hosts', {}).keys())
+    else:
+        return hosts.split(",")
 
 
 def print_result(result):
@@ -89,6 +93,7 @@ async def playbook_interpreter(playbook, inventory, module_dirs):
         tasks = play.get("tasks", [])
         hosts = play.get("hosts", [])
         name = play.get("name", "")
+        hosts = get_hosts_from_pattern(inventory, hosts)
         print()
         print(f"PLAY [{name}] ".ljust(term_width, "*"))
         for task in tasks:
